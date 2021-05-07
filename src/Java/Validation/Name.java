@@ -9,8 +9,4 @@ package Validation;
  **/
 public class Name {
 
-
-    public boolean validateName(String name){
-
-    }
 }
