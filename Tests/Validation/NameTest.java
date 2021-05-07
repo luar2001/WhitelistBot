@@ -21,34 +21,34 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class NameTest {
 
     /**
-     * Test for the nameValidation method.
-     * this method should check an incoming string if it adheres to minecraft naming standards
+     * Test for the nameValidationJava method.
+     * this method should check an incoming string if it adheres to minecraft Java edition naming standards
      *
      * @link https://help.minecraft.net/hc/en-us/articles/360034636712-Minecraft-Usernames Minecraft username ruels
      */
     @Test
-    final void nameValidationTest() {
+    final void nameValidationJavaTest() {
 
         //should be true
-        assertTrue(Name.nameValidation("testName"));
-        assertTrue(Name.nameValidation("t3l")); //3 character long name
-        assertTrue(Name.nameValidation("16chaRacTer_Long")); //16 leather long name with numbers, uppercase characters and underscore
+        assertTrue(Name.nameValidationJava("testName"));
+        assertTrue(Name.nameValidationJava("t3l")); //3 character long name
+        assertTrue(Name.nameValidationJava("16chaRacTer_Long")); //16 leather long name with numbers, uppercase characters and underscore
         //should be false
-        assertFalse(Name.nameValidation("")); //can't be blank
-        assertFalse(Name.nameValidation("test name")); // Can't have space
-        assertFalse(Name.nameValidation(null)); // can't be null
-        assertFalse(Name.nameValidation("t")); //can't be 1 character
-        assertFalse(Name.nameValidation("tt")); // can't be 2 characters
-        assertFalse(Name.nameValidation("17characters_Long")); // can't be more then 17 characters long
+        assertFalse(Name.nameValidationJava("")); //can't be blank
+        assertFalse(Name.nameValidationJava("test name")); // Can't have space
+        assertFalse(Name.nameValidationJava(null)); // can't be null
+        assertFalse(Name.nameValidationJava("t")); //can't be 1 character
+        assertFalse(Name.nameValidationJava("tt")); // can't be 2 characters
+        assertFalse(Name.nameValidationJava("17characters_Long")); // can't be more then 17 characters long
         //the only allowed special character is _ (underscore)
-        assertFalse(Name.nameValidation("&@&``@%~%~#$~`~%^"));
-        assertFalse(Name.nameValidation("`^`^%&^`^%&#~~@`%$"));
-        assertFalse(Name.nameValidation(">=<=+!<?*=*=?>?"));
-        assertFalse(Name.nameValidation("___-\\-////\\___\\|"));
-        assertFalse(Name.nameValidation("'\"'\"'\"\"'\"'\"''\"'"));
-        assertFalse(Name.nameValidation(".,:..;....,:.:."));
-        assertFalse(Name.nameValidation("ÒìÙç¹²ý¼ÏñÅÙÜ¸Ä"));
-        assertFalse(Name.nameValidation("R='\\)6r$]Ì-¸À£;"));
+        assertFalse(Name.nameValidationJava("&@&``@%~%~#$~`~%^"));
+        assertFalse(Name.nameValidationJava("`^`^%&^`^%&#~~@`%$"));
+        assertFalse(Name.nameValidationJava(">=<=+!<?*=*=?>?"));
+        assertFalse(Name.nameValidationJava("___-\\-////\\___\\|"));
+        assertFalse(Name.nameValidationJava("'\"'\"'\"\"'\"'\"''\"'"));
+        assertFalse(Name.nameValidationJava(".,:..;....,:.:."));
+        assertFalse(Name.nameValidationJava("ÒìÙç¹²ý¼ÏñÅÙÜ¸Ä"));
+        assertFalse(Name.nameValidationJava("R='\\)6r$]Ì-¸À£;"));
 
     }
 
