@@ -69,12 +69,12 @@ public class NameTest {
     @Disabled
     @DisplayName("Testing Name validation for Minecraft Bedrock Usernames")
     @Test
-    final void nameValidationBedrock() {
+    final void nameValidationBedrockTest() {
         //should be true
-        assertTrue(Name.nameValidationJava("test_Name")); //allows underscore
-        assertTrue(Name.nameValidationJava("13 Characters")); //13 leather long name with numbers, uppercase characters and it can have " " (white-space)
-        assertTrue(Name.nameValidationJava("t3l")); //3 character long name
-        assertTrue(Name.nameValidationJava("")); // can't be more then 17 characters long
+        assertTrue(Name.nameValidationBedrock("test_Name")); //allows underscore
+        assertTrue(Name.nameValidationBedrock("13 Characters")); //13 leather long name with numbers, uppercase characters and it can have " " (white-space)
+        assertTrue(Name.nameValidationBedrock("t3l")); //3 character long name
+        assertTrue(Name.nameValidationBedrock("")); // can't be more then 17 characters long
         //test Hangul here
         //test Katakana Here
         //Test Hiragana Here
@@ -85,11 +85,11 @@ public class NameTest {
         //test Thai here
 
         //should be false
-        assertFalse(Name.nameValidationJava("")); //can't be blank
-        assertFalse(Name.nameValidationJava(null)); // can't be null
-        assertFalse(Name.nameValidationJava("t")); //can't be 1 character
-        assertFalse(Name.nameValidationJava("tt")); // can't be 2 characters
-        assertFalse(Name.nameValidationJava("17characters_Long")); // can't be more then 17 characters long
+        assertFalse(Name.nameValidationBedrock("")); //can't be blank
+        assertFalse(Name.nameValidationBedrock(null)); // can't be null
+        assertFalse(Name.nameValidationBedrock("t")); //can't be 1 character
+        assertFalse(Name.nameValidationBedrock("tt")); // can't be 2 characters
+        assertFalse(Name.nameValidationBedrock("17characters_Long")); // can't be more then 17 characters long
     }
 
 }
